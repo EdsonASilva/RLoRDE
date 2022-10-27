@@ -3,6 +3,10 @@
 ## :memo: Description
 Developed to meet the needs of implementing training environments for robots guided by machine learning. This framework supports different robotic architectures and has 3 types of controllers based on reinforcement learning. In addition, one of the main features of the framework is the possibility of creating variation points in robotic control, allowing the use of several controllers at the same time. The use of these variation points allows the use of traditional controllers together with machine learning-based controllers in order to solve some of the problems, some of which include the need for self-adaptation, the need for a huge amount of data for training and mapping complex states.
 
+<p align="center">
+<img src="Media/Images/Framework_Approach.png" width="800" height="360">
+</p>
+
 <!--
 ## :books: Funcionalidades
 * <b>Funcionalidade 1</b>: O que essa funcionalidade faz?
