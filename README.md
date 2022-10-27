@@ -19,6 +19,11 @@ Developed to meet the needs of implementing training environments for robots gui
 
 ## :rocket: Running
 To run the project, you will need to follow these steps:
+Coming soon
+
+## :scroll: Papers
+1. On the Use of Reinforcement Learning for Self-adaptation of Mobile Robots
+  * [Experiment Data](dataset/Data of the experiments for Paper.xlsx)
 
 <!--
 ```
