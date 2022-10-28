@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/ppgi.ufam.edu.robot_system/src-gen" creationIcons="false"
+    editDirectory="/ppgi.ufam.edu.robot_system.edit/src-gen" editorDirectory="/ppgi.ufam.edu.robot_system.editor/src-gen"
+    modelPluginID="ppgi.ufam.edu.robot_system" modelName="Robot_system" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>robot_system.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Robot_system" basePackage="ppgi.ufam.edu" disposableProviderFactory="true"
+      ecorePackage="robot_system.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="robot_system.ecore#//Type_actuator">
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_actuator/Generic"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_actuator/Joint"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_actuator/Motor"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_actuator/Pan_Tilt"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="robot_system.ecore#//Type_sensor">
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_sensor/Generic"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_sensor/Camera"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_sensor/Sonar"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_sensor/Laser"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="robot_system.ecore#//Type_architecture">
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_architecture/Generic"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_architecture/Differencial_Drive"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_architecture/Skid_Steer_Drive"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_architecture/Omnidirectional"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_architecture/Ackerman_Drive"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_architecture/Quadrotor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="robot_system.ecore#//Type_controller">
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_controller/Generic"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_controller/Teleoperated"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_controller/DQN"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_controller/A2C"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_controller/DDPG"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="robot_system.ecore#//Type_rules">
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_rules/Bigger_than"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_rules/Less_than"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_rules/Between"/>
+      <genEnumLiterals ecoreEnumLiteral="robot_system.ecore#//Type_rules/Equal"/>
+    </genEnums>
+    <genClasses ecoreClass="robot_system.ecore#//Robot_System">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot_system.ecore#//Robot_System/has_actuator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot_system.ecore#//Robot_System/has_sensor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot_system.ecore#//Robot_System/has_controller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/type_archicture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/initial_positionX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/initial_positionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Robot_System/initial_positionZ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot_system.ecore#//Robot_System/has_discretize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot_system.ecore#//Robot_System/has_analyzer"/>
+    </genClasses>
+    <genClasses ecoreClass="robot_system.ecore#//Actuator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Actuator/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Actuator/id"/>
+    </genClasses>
+    <genClasses ecoreClass="robot_system.ecore#//Sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Sensor/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot_system.ecore#//Sensor/discretize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Sensor/id"/>
+    </genClasses>
+    <genClasses ecoreClass="robot_system.ecore#//Controller">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Controller/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Controller/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot_system.ecore#//Controller/control_actuator"/>
+    </genClasses>
+    <genClasses ecoreClass="robot_system.ecore#//World_System">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//World_System/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot_system.ecore#//World_System/has_robot_system"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//World_System/simulator"/>
+    </genClasses>
+    <genClasses ecoreClass="robot_system.ecore#//Discretize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Discretize/reduction_percent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot_system.ecore#//Discretize/analyzer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Discretize/id"/>
+    </genClasses>
+    <genClasses ecoreClass="robot_system.ecore#//Analyzer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Analyzer/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Analyzer/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot_system.ecore#//Analyzer/rules"/>
+    </genClasses>
+    <genClasses ecoreClass="robot_system.ecore#//Rules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Rules/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Rules/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Rules/min_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Rules/max_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot_system.ecore#//Rules/type_rule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot_system.ecore#//Rules/controller"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated robot_system -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ppgi.ufam.edu.robot_system.presentation.Robot_systemModelWizardID"
+            name="%_UI_Robot_systemModelWizard_label"
+            class="ppgi.ufam.edu.robot_system.presentation.Robot_systemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Robot_systemModelFile.gif">
+         <description>%_UI_Robot_systemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated robot_system -->
+      <editor
+            id="ppgi.ufam.edu.robot_system.presentation.Robot_systemEditorID"
+            name="%_UI_Robot_systemEditor_label"
+            icon="icons/full/obj16/Robot_systemModelFile.gif"
+            extensions="robot_system"
+            class="ppgi.ufam.edu.robot_system.presentation.Robot_systemEditor"
+            contributorClass="ppgi.ufam.edu.robot_system.presentation.Robot_systemActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="robot_system" nsURI="http://ppgi.ufam.edu.br/robot_system" nsPrefix="robot_system">
+  <eClassifiers xsi:type="ecore:EClass" name="Robot_System">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_actuator" upperBound="-1"
+        eType="#//Actuator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_sensor" upperBound="-1"
+        eType="#//Sensor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_controller" upperBound="-1"
+        eType="#//Controller" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type_archicture" lowerBound="1"
+        eType="#//Type_architecture" defaultValueLiteral="Differencial Drive"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initial_positionX" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initial_positionY" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initial_positionZ" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_discretize" upperBound="-1"
+        eType="#//Discretize" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_analyzer" upperBound="-1"
+        eType="#//Analyzer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actuator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//Type_actuator"
+        defaultValueLiteral="Generic"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//Type_sensor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="discretize" upperBound="-1"
+        eType="#//Discretize"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type_actuator">
+    <eLiterals name="Generic"/>
+    <eLiterals name="Joint" value="1"/>
+    <eLiterals name="Motor" value="2"/>
+    <eLiterals name="Pan_Tilt" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type_sensor">
+    <eLiterals name="Generic"/>
+    <eLiterals name="Camera" value="1"/>
+    <eLiterals name="Sonar" value="2"/>
+    <eLiterals name="Laser" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type_architecture">
+    <eLiterals name="Generic" literal="Generic"/>
+    <eLiterals name="Differencial_Drive" value="1" literal="Differencial_Drive"/>
+    <eLiterals name="Skid_Steer_Drive" value="2"/>
+    <eLiterals name="Omnidirectional" value="3" literal="Omnidirectional"/>
+    <eLiterals name="Ackerman_Drive" value="4"/>
+    <eLiterals name="Quadrotor" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controller">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Type_controller"
+        defaultValueLiteral="Generic"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="control_actuator" upperBound="-1"
+        eType="#//Actuator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type_controller">
+    <eLiterals name="Generic"/>
+    <eLiterals name="Teleoperated" value="1"/>
+    <eLiterals name="DQN" value="2"/>
+    <eLiterals name="A2C" value="3"/>
+    <eLiterals name="DDPG" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="World_System">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="World System"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_robot_system" upperBound="-1"
+        eType="#//Robot_System" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulator" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Discretize">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reduction_percent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="analyzer" upperBound="-1"
+        eType="#//Analyzer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Analyzer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enable" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//Rules" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rules">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enable" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="max_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type_rule" lowerBound="1"
+        eType="#//Type_rules" defaultValueLiteral="Bigger_than"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controller" eType="#//Controller"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type_rules">
+    <eLiterals name="Bigger_than"/>
+    <eLiterals name="Less_than" value="1"/>
+    <eLiterals name="Between" value="2"/>
+    <eLiterals name="Equal" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>

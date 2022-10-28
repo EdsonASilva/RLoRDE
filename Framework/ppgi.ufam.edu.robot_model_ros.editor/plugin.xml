@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated robot_model_ros -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ppgi.ufam.edu.robot_model_ros.presentation.Robot_model_rosModelWizardID"
+            name="%_UI_Robot_model_rosModelWizard_label"
+            class="ppgi.ufam.edu.robot_model_ros.presentation.Robot_model_rosModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Robot_model_rosModelFile.gif">
+         <description>%_UI_Robot_model_rosModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated robot_model_ros -->
+      <editor
+            id="ppgi.ufam.edu.robot_model_ros.presentation.Robot_model_rosEditorID"
+            name="%_UI_Robot_model_rosEditor_label"
+            icon="icons/full/obj16/Robot_model_rosModelFile.gif"
+            extensions="robot_model_ros"
+            class="ppgi.ufam.edu.robot_model_ros.presentation.Robot_model_rosEditor"
+            contributorClass="ppgi.ufam.edu.robot_model_ros.presentation.Robot_model_rosActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

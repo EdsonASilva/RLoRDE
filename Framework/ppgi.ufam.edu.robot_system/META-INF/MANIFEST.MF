@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ppgi.ufam.edu.robot_system;singleton:=true
+Automatic-Module-Name: ppgi.ufam.edu.robot_system
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: ppgi.ufam.edu.robot_system,
+ ppgi.ufam.edu.robot_system.impl,
+ ppgi.ufam.edu.robot_system.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

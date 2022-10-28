@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ppgi.ufam.edu.robot_model_ros;singleton:=true
+Automatic-Module-Name: ppgi.ufam.edu.robot_model_ros
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: ppgi.ufam.edu.robot_model_ros,
+ ppgi.ufam.edu.robot_model_ros.impl,
+ ppgi.ufam.edu.robot_model_ros.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
