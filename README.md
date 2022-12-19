@@ -29,6 +29,9 @@ Coming soon
 1. On the Use of Reinforcement Learning for Self-adaptation of Mobile Robots
   * [Experiment Data](https://docs.google.com/spreadsheets/d/1vO6tXOZh9U_WMlufi3iYBS2gYmeE9xtkWTYfrBhoAmo/edit?usp=sharing)
 
+## :movie_camera: Video on YouTube
+Link: https://www.youtube.com/playlist?list=PLk_gYfhRbfCNaBbse3VRULFEa8uAGSHtt
+
 <!--
 ```
 <linha de comando>
